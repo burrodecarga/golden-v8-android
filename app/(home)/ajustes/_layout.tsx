@@ -1,0 +1,22 @@
+import { useUserInfo } from '@/lib/userContext'
+import { Stack } from 'expo-router'
+import React from 'react'
+
+const AjustesLayout=() => {
+    const { profile }=useUserInfo()
+
+    const isAdmin=profile?.role==='admin'
+    return (
+        <Stack screenOptions={{ headerShown: false }} initialRouteName='index' >
+            <Stack.Protected guard={isAdmin}>
+                <Stack.Screen name='usuarios' />
+                <Stack.Screen name='plataformas' />
+                <Stack.Screen name='vehiculos' />
+            </Stack.Protected>
+            <Stack.Screen name='index' />
+
+        </Stack>
+    )
+}
+
+export default AjustesLayout

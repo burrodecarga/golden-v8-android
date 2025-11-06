@@ -13,7 +13,7 @@ const PermissionsCheckerProvider=({ children }: PropsWithChildren) => {
     if (locationStatus===PermissionStatus.GRANTED) {
       router.replace('/(home)/inicio')
     } else if (locationStatus!==PermissionStatus.CHECKING) {
-      router.replace('/(home)/permissions')
+      router.replace('/(home)/mapas/permissions')
     }
   }, [locationStatus])
 

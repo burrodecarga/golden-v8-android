@@ -87,7 +87,6 @@ const AjustesIndex=() => {
                     </Text>
                 </TouchableOpacity>
             </View>
-            <Text>AjustesIndex</Text>
 
         </View>
     )

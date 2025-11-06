@@ -13,8 +13,8 @@ const LoginScreen=() => {
     const { height }=useWindowDimensions()
     const [loading, setLoading]=useState(false)
     const [form, setForm]=useState({
-        email: 'admin@gmail.com',
-        password: '12345678'
+        email: '',
+        password: ''
     })
 
     const primary=useThemeColor({}, 'primary')

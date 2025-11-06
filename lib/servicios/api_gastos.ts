@@ -84,7 +84,7 @@ export const addGastoDeServicio=async (datos: any) => {
         console.log("error", error)
         return []
     } else {
-        console.log('GANO')
+        //console.log('GANO')
         return data
     }
 }

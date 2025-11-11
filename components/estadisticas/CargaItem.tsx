@@ -1,13 +1,11 @@
 import { Paleta } from '@/constants/Colors'
-import { APIServicio } from '@/lib/servicios/api_servicios'
 import { formatDate } from '@/utils/date-utils'
 import { Ionicons } from '@expo/vector-icons'
-import { router } from 'expo-router'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 interface CargaItemProps {
-    item: APIServicio
+    item: any,
     ver?: 'cobrado'|'no cobrado'|'todos'
 }
 const CargaItem=({ item, ver }: CargaItemProps) => {
@@ -20,7 +18,7 @@ const CargaItem=({ item, ver }: CargaItemProps) => {
     }
 
     return (
-        <TouchableOpacity style={styles.container} onPress={() => { router.push(`/(drawer)/(home)/(tabs)/cargas/carga/${item.id}`) }}>
+        <TouchableOpacity style={styles.container} onPress={() => { }}>
 
             <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start', alignContent: 'center' }}>
                 <Ionicons name='calendar-number-outline' size={14} />

@@ -27,7 +27,7 @@ const CargaChoferSemanalItem=({ item, ver }: CargaItemProps) => {
                     <Text style={{ fontSize: 13, marginLeft: 10, fontWeight: 'bold' }}>{item.chofer?.toLocaleUpperCase()}</Text>
                 </View>
 
-                <Button title='ver detalles' variant='outline' size='small' onPress={() => router.push({ pathname: '/(home)/(admin)/(semanas)/by_chofer', params: { 'semana': item.semana, 'chofer': item.chofer } })} style={{ marginVertical: 5 }} />
+                <Button title='ver detalles' variant='outline' size='small' onPress={() => router.push({ pathname: '/(home)/estadisticas/by_chofer', params: { 'semana': item.semana, 'chofer': item.chofer } })} style={{ marginVertical: 5 }} />
 
             </View>
             <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start' }}>

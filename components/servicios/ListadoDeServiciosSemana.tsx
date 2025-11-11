@@ -1,8 +1,7 @@
 import { APIServicioRow } from '@/lib/servicios/api_servicios'
 import { formatDate } from '@/utils/date-utils'
-import { Ionicons } from '@expo/vector-icons'
 import React, { useState } from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
+import { View } from 'react-native'
 import Label from '../Label'
 import LabelCol from '../LabelCol'
 import Card from '../ui/Card'
@@ -70,12 +69,12 @@ const ListadoDeServiciosSemana=({ items, ver }: CargaItemProps) => {
 
 
 
-                <View style={{ padding: 6, backgroundColor: '#f7f7f8' }}>
+                {/* <View style={{ padding: 6, backgroundColor: '#f7f7f8' }}>
                     <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} onPress={() => { }}>
                         <Text style={{ fontSize: 16 }}>Ver detalles : </Text>
                         <Ionicons name='eye-outline' size={24} />
                     </TouchableOpacity>
-                </View>
+                </View> */}
 
 
             </View>

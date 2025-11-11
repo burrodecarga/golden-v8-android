@@ -26,7 +26,7 @@ const CargaVehiculoSemanalItem=({ item, ver }: CargaItemProps) => {
                     <Text style={{ fontSize: 13, marginLeft: 10, fontWeight: 'bold' }}>{item.name?.toLocaleUpperCase()}</Text>
                 </View>
 
-                <Button title='ver detalles' variant='outline' size='small' onPress={() => router.push({ pathname: '/(home)/(admin)/(semanas)/by_vehiculo', params: { 'semana': item.semana, 'vehiculo': item.name } })} style={{ marginVertical: 5 }} />
+                <Button title='ver detalles' variant='outline' size='small' onPress={() => router.push({ pathname: '/(home)/estadisticas/by_vehiculo', params: { 'semana': item.semana, 'vehiculo': item.name } })} style={{ marginVertical: 5 }} />
 
             </View>
             <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start' }}>

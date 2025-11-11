@@ -225,6 +225,7 @@ export const GetAllServicios=async () => {
 }
 
 export type APIServicios=Awaited<ReturnType<typeof GetAllServicios>>
+export type APIServicio=APIServicios[number]
 export type APIServicioRow=Database["public"]["Tables"]["servicios"]["Row"]
 export type Fotos_Servicios=
     Database["public"]["Tables"]["fotos_servicios"]["Row"]

@@ -75,13 +75,7 @@ export default function TabHomeLayout() {
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="chat-alert-outline" size={24} color={color} />,
         }}
       />
-      <Tabs.Screen
-        name="mapas"
-        options={{
-          title: 'mapas',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="google-maps" size={24} color={color} />,
-        }}
-      />
+
       <Tabs.Screen
         name="ajustes"
         options={{

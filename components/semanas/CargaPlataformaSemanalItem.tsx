@@ -31,7 +31,7 @@ const CargaPlataformaSemanalItem=({ item, ver }: CargaPlataformaItemProps) => {
                     <Text style={{ fontSize: 13, marginLeft: 10, fontWeight: 'bold' }}>{item.nombre?.toLocaleUpperCase()}</Text>
                 </View>
 
-                <Button title='ver detalles' variant='outline' size='small' onPress={() => router.push({ pathname: '/(home)/(admin)/(semanas)/by_plataforma', params: { 'semana': item.semana, 'plataforma': item.nombre } })} style={{ marginVertical: 5 }} />
+                <Button title='ver detalles' variant='outline' size='small' onPress={() => router.push({ pathname: '/(home)/estadisticas/by_plataforma', params: { 'semana': item.semana, 'plataforma': item.nombre } })} style={{ marginVertical: 5 }} />
 
             </View>
             <View style={{ flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start' }}>

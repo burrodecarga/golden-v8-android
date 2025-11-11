@@ -2,7 +2,6 @@ import { RelativePathString, router } from 'expo-router'
 import React from 'react'
 import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { ThemedText } from './ThemedText'
-import { ExternalPathString } from 'expo-router'
 
 export interface FotoProps {
     id: string,
@@ -18,7 +17,7 @@ export interface FotoProps1 {
     pathname?: any
 }
 
-const xpath='/(home)/(admin)/(servicios)/(servicio)/(images)/zoom' as RelativePathString
+const xpath='/(home)/inicio' as RelativePathString
 const imgUri='https://stxsnrianylaldkorlgy.supabase.co/storage/v1/object/public/personal//logo.png'
 
 const FotoBtn=({ uri=imgUri, size=32, name='Reserva', pathname=xpath }: FotoProps1) => {

@@ -8,7 +8,6 @@ import 'react-native-reanimated'
 import Loading from '@/components/Loading'
 import { useColorScheme } from '@/hooks/use-color-scheme'
 import { AuthProvider, useUserInfo } from '@/lib/userContext'
-import PermissionsCheckerProvider from '@/providers/PermissionsCheckerProvider'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 export const unstable_settings={
@@ -34,18 +33,16 @@ export default function RootLayout() {
     }
     return (
       <ThemeProvider value={colorScheme==='dark'? DarkTheme:DefaultTheme}>
-        <PermissionsCheckerProvider>
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Protected guard={!isAuthenticated}>
-              <Stack.Screen name='(auth)' options={{ animation: 'none' }} />
-            </Stack.Protected>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Protected guard={!isAuthenticated}>
+            <Stack.Screen name='(auth)' options={{ animation: 'none' }} />
+          </Stack.Protected>
 
-            <Stack.Protected guard={!!isAuthenticated}>
-              <Stack.Screen name='(home)' options={{ animation: 'fade' }} />
-            </Stack.Protected>
-          </Stack>
-          <StatusBar style="auto" />
-        </PermissionsCheckerProvider>
+          <Stack.Protected guard={!!isAuthenticated}>
+            <Stack.Screen name='(home)' options={{ animation: 'fade' }} />
+          </Stack.Protected>
+        </Stack>
+        <StatusBar style="auto" />
       </ThemeProvider>
 
     )

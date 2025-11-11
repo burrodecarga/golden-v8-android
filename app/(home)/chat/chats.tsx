@@ -66,7 +66,7 @@ export default function ChatScreen() {
 
     return (
         <>
-            <Button onPress={() => router.replace('/(home)/chat/ContactsScreen')} title="regresar" />
+            <Button onPress={() => router.replace('/(home)/chat')} title="regresar" />
             <GiftedChat
                 messages={messages.map((message) => ({
                     _id: message.id,

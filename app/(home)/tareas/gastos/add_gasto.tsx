@@ -111,6 +111,10 @@ const AddGastoScreen=() => {
 
     // }
     const addGasto=async () => {
+        if (form.monto===0||form.monto==='') {
+            Alert.alert('Error en registro', 'el monto debe ser superior a cero')
+            return
+        }
         const data=addGastoDeServicio(form)
         //console.log('DATA', form)
     }
